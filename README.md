@@ -1,6 +1,8 @@
 # Weighted Latent Class Analysis (WLCA)
 
-This is a Python implementation of Weighted Latent Class Analysis (WLCA) clustering. Probabilistic [latent class model](https://doi.org/10.1016/S0167-9473(02)00179-2) is essentially a finite mixture model which estimates probabilities that certain elements are members of certain latent classes. This WLCA implementation builds upon and extends [latent class analysis](https://github.com/dasirra/latent-class-analysis). To provide an easy to use framework, required (Shell/Python) scripts are provided. This implementation is tested with PCCIU data (~1.7M records) having 40 long term conditions (LTCs). Specifically, 40 LTCs are `'Hypertension', 'Depression', 'PainfulCondition', 'ActiveAsthma', 'CHD', 'TreatedDyspepsia', 'Diabetes', 'ThyroidDisorders', 'RheumatoidArthritisEtc', 'HearingLoss', 'COPD', 'AnxietyEtc', 'IrritableBowelSyndrome', 'AnyCancer_Last5Yrs', 'AlcoholProblems', 'OtherPsychoactiveMisuse', 'TreatedConstipation', 'StrokeTIA', 'CKD', 'Diverticular', 'AtrialFib', 'PeripheralVascularDisease', 'HeartFailure', 'Prostate', 'Glaucoma', 'Epilepsy', 'Dementia', 'SchizophreniaBipolar', 'PsoriasisEczema', 'InflammatoryBowelDisease', 'Migraine', 'Blindness', 'ChronicSinusitis', 'LearningDisability', 'AnorexiaBulimia', 'Bronchiectasis', 'Parkinsons', 'MultipleSclerosis', 'ViralHepatitis', 'ChronicLiverDisease'`.
+This is a Python implementation of Weighted Latent Class Analysis (WLCA) clustering. Probabilistic [latent class model](https://doi.org/10.1016/S0167-9473(02)00179-2) is essentially a finite mixture model which estimates probabilities that certain elements are members of certain latent classes. This WLCA implementation builds upon and extends [latent class analysis](https://github.com/dasirra/latent-class-analysis). To provide an easy to use framework, required (Shell/Python) scripts are provided. This implementation is tested with PCCIU data (~1.7M records) having 40 long term conditions (LTCs).
+
+Specifically, 40 LTCs are `'Hypertension', 'Depression', 'PainfulCondition', 'ActiveAsthma', 'CHD', 'TreatedDyspepsia', 'Diabetes', 'ThyroidDisorders', 'RheumatoidArthritisEtc', 'HearingLoss', 'COPD', 'AnxietyEtc', 'IrritableBowelSyndrome', 'AnyCancer_Last5Yrs', 'AlcoholProblems', 'OtherPsychoactiveMisuse', 'TreatedConstipation', 'StrokeTIA', 'CKD', 'Diverticular', 'AtrialFib', 'PeripheralVascularDisease', 'HeartFailure', 'Prostate', 'Glaucoma', 'Epilepsy', 'Dementia', 'SchizophreniaBipolar', 'PsoriasisEczema', 'InflammatoryBowelDisease', 'Migraine', 'Blindness', 'ChronicSinusitis', 'LearningDisability', 'AnorexiaBulimia', 'Bronchiectasis', 'Parkinsons', 'MultipleSclerosis', 'ViralHepatitis', 'ChronicLiverDisease'`.
 
 
 ## WLCA over LCA
@@ -37,7 +39,7 @@ Dummy data (both patients and their corresponding weights) has already been prov
 To generate dummy data on your own:
 > python generateData.py
 
-
+If the input data has no replications (i.e., all instances are unique), simply assume a weight of 1 for each instance (i.e., set all weights in `<dataWeights.txt>` to 1).
 While working with data with replications e.g. PCCIU, we follow:
 
 _STEP 1_ - filter data: Remove patients with duplicate LTC combinations and keep patID mapping who have the same combinations.
