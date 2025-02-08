@@ -1,0 +1,2 @@
+
+[2025-02-07 16:16:56.132955] ./output/WLCAtheta_patients_random_1K_nCluster=5_r1.txt [2025-02-07 16:17:10.532114] Converged.
